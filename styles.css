@@ -1,0 +1,79 @@
+:root {
+    --main-margin: 1em;
+}
+ 
+ 
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    width: 100vw;
+}
+ 
+#container {
+    display: flex;
+    flex-direction: column;
+    /*     width: 100vw; */
+    height: 100vh;
+    /* justify-content: stretch; */
+    /* padding: var(--main-margin); */
+}
+ 
+header {
+    background-color: #8E7CC3;
+    flex: 0 0 150px;
+    /* flex-basis: 150px; */
+    /* height: 150px; */
+    margin: var(--main-margin);
+    border: 4px solid black;
+}
+ 
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    /* flex-wrap: wrap; */
+    /*     height: 70vh; */
+}
+ 
+#cards>section {
+    background-color: #E06666;
+    margin: var(--main-margin);
+    border: 4px solid black;
+    /* flex: 1 1 0; */
+    /* flex-basis: auto; */
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30vw; */
+    /* flex: 1 0 auto; */
+    /* width: 30vw; */
+}
+ 
+section>h1 {
+    padding: 0 0.8rem;
+}
+ 
+section>p {
+    padding: 0 0.8rem;
+}
+ 
+#cards>section:nth-child(2) {
+    background-color: #94C47D;
+    /* flex-shrink: 2; */
+}
+ 
+#cards>section:nth-child(3) {
+    background-color: #FF9900;
+}
+ 
+@media (max-width: 920px) {
+    html {
+        font-size: 20px;
+    }
+ 
+    #cards {
+        flex-direction: column;
+    }
+}
